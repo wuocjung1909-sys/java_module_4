@@ -1,0 +1,186 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    background-color: rgb(0, 0, 0);
+    color: #f15959;
+    margin: 0;
+    padding: 0;
+}
+
+/*Link "Skip to Main Content" (Chỉ hiện khi Focus/Tab) */
+.skip-link {
+    position: absolute;
+    top: -100px; /* Ẩn khỏi màn hình mặc định */
+    left: 10px;
+    background-color: black;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 10px; /* Hiện ra khi người dùng dùng phím Tab */
+}
+
+header {
+    background-color: rgb(15, 82, 15);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    color: #ffffff;
+}
+
+
+nav {
+    background-color: rgb(42, 45, 42);
+    padding: 10px 0;
+    width: 100%;
+    margin: 0;
+    border-radius: 8px;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    gap: 15px;
+    list-style-type: none;
+}
+
+li {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #1a252f;
+    border-radius: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    color: #f15959;
+    text-decoration: underline;
+}
+
+main {
+    background-color: #ffffff;
+    font-size: 1.1rem;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+}
+
+p {
+    line-height: 1.6;
+    color: #212529;
+}
+
+
+main img {
+    box-sizing: border-box;
+    border: 3px solid rgb(15, 82, 15); /* Thêm border */
+    padding: 5px;                      /* Thêm padding */
+    border-radius: 8px;                /* Border-radius */
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+}
+
+
+main img:hover {
+    opacity: 0.5;
+    border-color: #f15959;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.grid img:nth-child(even),
+.flex img:nth-child(even) {
+    border-radius: 20px 0px 20px 0px;
+}
+
+.grid img:nth-child(odd),
+.flex img:nth-child(odd) {
+    border-radius: 0px 20px 0px 20px;
+}
+
+footer {
+    background-color: #1a252f;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    color: #ffffff;
+    margin: 0;
+}
+
+footer p a {
+    color: #ffffff;
+}
+
+
+/* CSS dành riêng cho khung hiển thị ảnh lớn Gallery */
+#image {
+    width: 100%;
+    height: 550px;
+    border: 3px solid rgb(15, 82, 15);
+    background-color: #8e8e8e;
+    background-position: center;
+    background-size: cover;
+    color: #013c76;
+    font-size: 140%;
+    text-align: center;
+    line-height: 450px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.preview {
+    width: 100%;
+    max-width: 150px;           /* Cố định kích thước tối đa cho ảnh nhỏ */
+    height: 100px;              /* Cố định chiều cao */
+    object-fit: cover;          /* Đảm bảo ảnh không bị méo tỉ lệ */
+    border: 2px solid #1a252f;  /* Viền bo xung quanh ảnh */
+    border-radius: 6px;         /* Bo góc nhẹ cho hình ảnh */
+    cursor: pointer;            /* Đổi con trỏ chuột thành hình bàn tay khi rê vào */
+    transition: all 0.3s ease;
+    margin: auto;
+}

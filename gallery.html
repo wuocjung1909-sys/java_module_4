@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery Assignment</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="addTabFocus()">
+
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="neighborhood.html">Neighborhood Walks</a></li>
+        <li><a href="parks.html">Walks in the Park</a></li>
+        <li><a href="gallery.html">ZoomIn</a></li>
+      </ul>
+    </nav>
+    <img src="images/BaconGallupPark.jpg" width="200" alt="Brown Labradoodle sitting next to a statue.">
+    <h1>Springtime in Michigan</h1>
+  </header>
+
+  <main id="main-content">
+    <!-- Khung hiển thị ảnh lớn -->
+    <div id="image">
+      Hover over an image below to display here.
+    </div>
+
+    <!-- Danh sách 6 ảnh có đầy đủ thuộc tính alt và sự kiện chuột + bàn phím -->
+    <div class="grid">
+      <img class="preview" 
+           src="images/bend_in_the_road.png" 
+           alt="A purple tree stands in contrast to the green leaved trees" 
+           onmouseover="upDate(this)" 
+           onmouseleave="undo()" 
+           onfocus="upDate(this)" 
+           onblur="undo()">
+
+      <img class="preview" 
+           src="images/pink_blossoms.png" 
+           alt="Small pink blossoms on an otherwise green leaved tree" 
+           onmouseover="upDate(this)" 
+           onmouseleave="undo()" 
+           onfocus="upDate(this)" 
+           onblur="undo()">
+
+      <img class="preview" 
+           src="images/blooming_trees.png" 
+           alt="Brown labradoodle sitting in front of white and purple blooming trees" 
+           onmouseover="upDate(this)" 
+           onmouseleave="undo()" 
+           onfocus="upDate(this)" 
+           onblur="undo()">
+
+      <img class="preview" 
+           src="images/falling_petals.png" 
+           alt="A purple tulip tree that is beginning to shed its petals" 
+           onmouseover="upDate(this)" 
+           onmouseleave="undo()" 
+           onfocus="upDate(this)" 
+           onblur="undo()">
+
+      <img class="preview" 
+           src="images/hanging_plants.png" 
+           alt="Red and green plants in a decorative hanging basket" 
+           onmouseover="upDate(this)" 
+           onmouseleave="undo()" 
+           onfocus="upDate(this)" 
+           onblur="undo()">
+
+      <img class="preview" 
+           src="images/potted_plants.png" 
+           alt="A decorative planter with a variety of brightly colored plants" 
+           onmouseover="upDate(this)" 
+           onmouseleave="undo()" 
+           onfocus="upDate(this)" 
+           onblur="undo()">
+    </div>
+  </main>
+
+  <footer>
+    <p>This page was originally created by Colleen van Lent for the <a href="https://www.coursera.org/specializations/web-design">Web Design for Everybody</a> Specialization. Students are invited to make changes.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
